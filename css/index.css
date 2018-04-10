@@ -55,7 +55,9 @@
     width: 100px;
     height: 100px;
     display: block;
-    margin: 0 auto;
+    position: absolute;
+    top: 668px;
+    left: 50%;
 }
 
 #top {
@@ -190,6 +192,7 @@
 .skill {
     height: 768px;
     background: #ff4f4f;
+    position: relative;
 }
 
 .skill h2 {
@@ -200,16 +203,18 @@
 
 #lan {
     display: block;
-    margin: 50px auto 0;
+    position: absolute;
+    left: 35%;
+    top: 100px;
+    float: left;
 }
 
 #list {
     width: 240px;
-    margin: 0 auto;
+    padding: 100px;
 }
 
 #list .lis {
-    float: left;
     width: 240px;
 }
 
@@ -235,6 +240,7 @@
     line-height: 24px;
     border-bottom: 1px solid #333;
     text-indent: 24px;
+    background: #6cff4f;
 }
 
 #list ul li:hover {
