@@ -1,42 +1,24 @@
-html,
-body,
-ul,
-li,
-ol,
-dl,
-dd,
-dt,
-p,
-h1,
-h2,
-h3,
-h4,
-h5,
-h6,
-form,
-fieldset,
-legend,
-img {
-    margin: 0;
-    padding: 0
-}
-
-img {
-    border: none;
-}
-
-li {
-    list-style: none;
-}
+/* 
+    导航条
+ */
 
 #navbar {
     position: fixed;
     top: 0;
     height: 40px;
-    width: 100%; 
-    background: #ebff09;
+    width: 100%;
+    background: #141111;
     z-index: 10;
-    opacity: 0.5;
+    opacity: 0.8;
+}
+
+#navbar .dis {
+    margin: 30px;
+    color: #eab81f
+}
+
+#navbar .dis:hover {
+    color: #d2155c;
 }
 
 #navbar .nav1 {
@@ -55,6 +37,7 @@ li {
     float: right;
     line-height: 40px;
     font-size: 30px;
+    color: #f60;
 }
 
 #navbar .nav3 {
@@ -64,12 +47,23 @@ li {
     cursor: pointer;
 }
 
+/* 
+    头部
+ */
+
 #bot {
     width: 100px;
     height: 100px;
-    position: absolute;
-    left: 47%;
-    bottom: 0;
+    display: block;
+    margin: 0 auto;
+}
+
+#top {
+    position: fixed;
+    right: 30px;
+    bottom: 20px;
+    cursor: pointer;
+    z-index: 10
 }
 
 .head {
@@ -85,8 +79,42 @@ li {
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
 }
 
+.head .tw {
+    -webkit-animation: twinkling 1s infinite ease-in-out;
+    animation: twinkling 1s infinite ease-in-out;
+}
+
+.head .an {
+    -webkit-animation-duration: 1s;
+    animation-duration: 1s;
+    -webkit-animation-fill-mode: both;
+    animation-fill-mode: both;
+}
+
+@-webkit-keyframes twinkling {
+    0% {
+        opacity: 0.5;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+@keyframes twinkling {
+    0% {
+        opacity: 0.5;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+/* 
+    主体
+ */
+
 .public {
-    background: #06ff00;
+    background: #ff4fe0;
     height: 768px;
 }
 
@@ -155,17 +183,13 @@ li {
     line-height: 25px;
 }
 
-#top {
-    position: fixed;
-    right: 30px;
-    bottom: 20px;
-    cursor: pointer;
-    z-index: 10
-}
+/* 
+    技能
+ */
 
 .skill {
     height: 768px;
-    background: #ff1212;
+    background: #ff4f4f;
 }
 
 .skill h2 {
@@ -174,112 +198,56 @@ li {
     color: #eab81f;
 }
 
-@-webkit-keyframes open {
-    0% {
-        -webkit-transform: rotateX(-120deg);
-    }
-    25% {
-        -webkit-transform: rotateX(30deg);
-    }
-    50% {
-        -webkit-transform: rotateX(-15deg);
-    }
-    75% {
-        -webkit-transform: rotateX(8deg);
-        box-shadow: inset 0 0 0 0 #ccc;
-    }
-    100% {
-        -webkit-transform: rotateX(0deg);
-    }
+#lan {
+    display: block;
+    margin: 50px auto 0;
 }
 
-@-webkit-keyframes clos {
-    0% {
-        -webkit-transform: rotateX(0deg);
-    }
-    100% {
-        -webkit-transform: rotateX(-120deg);
-    }
-}
-
-.wrap {
+#list {
     width: 240px;
-    position: relative;
-    -webkit-perspective: 800px;
     margin: 0 auto;
 }
 
-.wrap input {
+#list .lis {
+    float: left;
     width: 240px;
-    height: 40px;
-    background: #f60;
-    color: #fff;
-    line-height: 40px;
-    text-align: center;
-    font-size: 16px;
-    position: relative;
-    z-index: 10;
-    border: none;
 }
 
-.wrap div {
-    position: absolute;
-    top: 30px;
-    left: 0;
-    -webkit-transform-style: preserve-3d;
-    width: 100%;
-    -webkit-transform-origin: top;
-    -webkit-transform: rotateX(-120deg);
-    z-index: 1;
-}
-
-.wrap>div:nth-of-type(1) {
-    top: 40px;
-}
-
-.wrap span {
-    display: block;
-    height: 28px;
-    background: #CF3;
-    color: #fff;
-    font: 14px/28px "宋体";
+#list h3 {
+    height: 30px;
+    line-height: 30px;
     text-indent: 20px;
-    box-shadow: inset 0 0 100px 20px rgba(0, 0, 0, 1);
-    transition: 1s;
+    background: url(../img/ico1.gif) no-repeat 5px center #6FF;
+    color: #000;
+    cursor: pointer;
 }
 
-.wrap .open {
-    -webkit-transform: rotateX(0deg);
-    -webkit-animation: 1.5s open ease-in;
+#list .active {
+    background: url(../img/ico2.gif) no-repeat 5px center #FF9;
+    color: #000;
 }
 
-.wrap .open>span {
-    box-shadow: inset 0 0 100px 20px rgba(0, 0, 0, 0);
+#list ul {
+    display: none;
 }
 
-.wrap .clos {
-    -webkit-transform: rotateX(-120deg);
-    -webkit-animation: 0.7s clos ease;
+#list ul li {
+    line-height: 24px;
+    border-bottom: 1px solid #333;
+    text-indent: 24px;
 }
 
-.wrap .clos>span {
-    box-shadow: inset 0 0 100px 20px rgba(0, 0, 0, 1);
+#list ul li:hover {
+    background: #7357f1;
+    color: #333;
 }
 
-.hobby {
-    background: url(../img/Asuna.jpg);
-    height: 768px;
-}
-
-.hobby h2 {
-    text-align: center;
-    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-    font-weight: 200;
-    color: darkorange;
-}
+/* 
+    demo
+*/
 
 .demo {
-    background: blue;
+    background: #6cff4f;
     height: 768px;
     position: relative;
 }
@@ -313,7 +281,17 @@ li {
     color: #ff1212
 }
 
-#lan {
-    display: block;
-    margin: 50px auto 0;
+/* 
+    感谢
+ */
+
+#last {
+    height: 768px;
+    background: #ebff09;
+}
+
+#last p {
+    text-align: center;
+    padding: 300px 0 0 0;
+    font-size: 30px;
 }

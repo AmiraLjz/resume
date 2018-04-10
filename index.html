@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>罗敬之的简历</title>
+    <link rel="stylesheet" href="css/reset.css">
     <link rel="stylesheet" href="css/index.css">
     <script src="js/index.js"></script>
 </head>
@@ -16,13 +17,17 @@
         <a href="mailto:lo1000074@outlook.com" class="nav2">Mail</a>
         <p>欢迎观看我的简历</p>
         <img src="img/an1.jpg" class="nav3">
+        <a href="#public" class="dis">个人简介</a>
+        <a href="#skill" class="dis">专业技能</a>
+        <a href="#demo" class="dis">demo</a>
+        <a href="#last" class="dis">谢谢观看</a>
     </nav>
     <section class="head">
-        <h1>Welcome your coming!</h1>
+        <h1 class="tw an">Welcome your coming!</h1>
         <img src="img/bot.gif" id="bot">
-        <img src="img/top.gif" id="top" title="到顶部">
+        <img src="img/top.gif" id="top" title="到顶部"><br>
     </section>
-    <section class="public">
+    <section class="public" id="public">
         <img src="img/photo.jpg" id="photo">
         <br>
         <a href="https://github.com/AmiraLjz">
@@ -59,47 +64,37 @@
             我是一个容易相处的人，做事积极主动、认真负责。熟悉html、css、js，能独立做出一些拥有简单效果的页面，能使用jQuery框架，了解一些vue和linux基础,关注最新前沿技术，有Python基础。
         </p>
     </section>
-    <section class="skill">
+    <section class="skill" id="skill">
         <h2>Master skill</h2>
-        <div class="wrap">
-            <input type="button" id="btn" value="Basic language&Frame">
-            <div>
-                <span>Html(5)</span>
-                <div>
-                    <span>Css(3)</span>
-                    <div>
-                        <span>Javascript</span>
-                        <div>
-                            <span>Python</span>
-                            <div>
-                                <span>Php</span>
-                                <div>
-                                    <span>JQuery</span>
-                                    <div>
-                                        <span>Bootstrap</span>
-                                        <div>
-                                            <span>Vue</span>
-                                            <div>
-                                                <span>Less</span>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
+        <ul id="list">
+			<li class="lis">
+				<h3>Basic language</h3>
+				<ul>
+					<li>Html</li>
+					<li>Css</li>
+					<li>Javascript</li>
+					<li>Python</li>
+				</ul>
+			</li>
+			<li class="lis">
+				<h3>Frame</h3>
+				<ul>
+					<li>jQuery</li>
+					<li>Vue</li>
+					<li>Less</li>
+					<li>bootstrap</li>
+				</ul>
+			</li>
+		</ul>
         <img src="img/language.gif" id="lan">
     </section>
-    <section class="hobby">
-        <h2>Hobby</h2>
-    </section>
-    <section class="demo">
+    <section class="demo" id="demo">
         <h2>Demo</h2>
         <a href="https://amiraljz.github.io/roll/" id="demo_1"><span>1.</span><img src="img/roll.gif" alt=""><br>超简易广告切换的ui</a>
-        <a href="https://github.com/AmiraLjz/xz/tree/master" id="demo_2"><span>2.</span><img src="img/box.png" alt=""><br>jQ简单推箱子游戏</a>
+        <a href="https://amiraljz.github.io/xz/tuixiangzi.html" id="demo_2"><span>2.</span><img src="img/box.png" alt=""><br>jQ简单推箱子游戏</a>
+    </section>
+    <section id="last">
+        <p>谢谢观看!<br>如果您有意的话，请与我联系吧！<br><a href="mailto:lo1000074@outlook.com">lo1000074@outlook.com</a></p>
     </section>
 </body>
 

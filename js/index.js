@@ -1,38 +1,11 @@
 window.onload = function () {
     var oNavImg = document.getElementById('navbar').getElementsByTagName('img')[0];
-    var oBtn = document.getElementById("btn");
-    var oBtn2 = document.getElementById("btn2");
-    var oWrap = document.getElementsByClassName("wrap")[0];
-    var aDiv = oWrap.getElementsByTagName("div");
-    var i = 0;
-    var oTimer = null;
-    var iDelay = 200;
-    var Boff = true;
     var oTop = document.getElementById('top');
-    var timer = null;
     var oBot = document.getElementById('bot');
-    oBtn.onclick = function () {
-        if (Boff) {
-            i = 0;
-            oTimer = setInterval(function () {
-                aDiv[i].className = "open";
-                if (i == aDiv.length - 1) {
-                    clearInterval(oTimer);
-                }
-                i++;
-            }, iDelay);
-        } else {
-            i = aDiv.length - 1;
-            oTimer = setInterval(function () {
-                aDiv[i].className = "clos";
-                if (i == 0) {
-                    clearInterval(oTimer);
-                }
-                i--;
-            }, 100);
-        }
-        Boff = !Boff;
-    };
+    var timer = null;
+    var oUl = document.getElementById("list");
+    var aH3 = oUl.getElementsByTagName("h3");
+    var aUl = oUl.getElementsByTagName("ul");
 
     oNavImg.onclick = function () {
         document.body.scrollTop = document.documentElement.scrollTop = 768;
@@ -51,7 +24,20 @@ window.onload = function () {
         });
     };
 
-    oBot.onclick = function() {
+    oBot.onclick = function () {
         document.body.scrollTop = document.documentElement.scrollTop = 768;
     };
+
+    for (var i = 0; i < aH3.length; i++) {
+        aH3[i].index = i;
+        aH3[i].onclick = function () {
+            if (this.className == "") {
+                aUl[this.index].style.display = "block";
+                this.className = "active";
+            } else {
+                aUl[this.index].style.display = "none";
+                this.className = "";
+            }
+        };
+    }
 };
